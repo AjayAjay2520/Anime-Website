@@ -1,0 +1,23 @@
+.title img {
+    width:auto;
+    height: auto;
+    
+}
+/* .carousel-caption img{
+    width: 600px;
+    height: 500px;
+} */
+
+
+@media screen and (min-width:425px){
+    .d-md-block{
+        display: block !important;
+    }
+    .carousel-control-prev{
+        left: 0px;
+    }
+    .carousel-control-next{
+        margin-right:0rem;
+    }
+    
+}

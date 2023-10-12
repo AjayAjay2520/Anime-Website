@@ -1,0 +1,376 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Main_carosel img::after{
+  background: linear-gradient(
+    90deg,
+    rgb(0, 0, 0) 33.17%,
+    rgba(0, 0, 0, 0.8) 50.9%,
+    rgba(0, 0, 0, 0.24) 100%
+  );
+}
+/* PIRAMID LODED-SVG------------------------------- */
+.pyramid-loader {
+  position: relative;
+  width: 200px;
+  height: 70px;
+  display: block;
+  transform-style: preserve-3d;
+  transform: rotateX(-20deg);
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.pyramid-loader .wrapper .side {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(to bottom right, #FFA500, #FF4500);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transform-origin: center top;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.pyramid-loader .wrapper .side1 {
+  transform: rotateZ(-30deg) rotateY(90deg);
+  background: linear-gradient(to bottom right, #FF4500, #FFA500);
+}
+
+.pyramid-loader .wrapper .side2 {
+  transform: rotateZ(30deg) rotateY(90deg);
+  background: linear-gradient(to bottom right, #FFA500, #FF4500);
+}
+
+.pyramid-loader .wrapper .side3 {
+  transform: rotateX(30deg);
+  background: linear-gradient(to bottom right, #FFA500, #FF4500);
+}
+
+.pyramid-loader .wrapper .side4 {
+  transform: rotateX(-30deg);
+  background: linear-gradient(to bottom right, #FF4500, #FFA500);
+}
+
+.pyramid-loader .wrapper .shadow {
+  width: 60px;
+  height: 60px;
+  background: #FF8C00;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transform: rotateX(90deg) translateZ(-40px);
+  filter: blur(12px);
+}
+/* Section-1------------------------------------ */
+.section-1{
+    margin-left: 3.5rem; 
+    width: auto;
+}
+.section-1 h3{
+    color: aliceblue;
+}
+.section-1 .h5{
+    color: gray;
+}
+.S-1h:hover{
+    color: orange;
+    cursor: pointer;
+}
+.show_card .image{
+    overflow: hidden;
+}
+.show_card img:hover{
+    transform: scale(1.5);
+    transition: 0.5s;
+}
+.show_card a{
+    text-decoration: none;
+    color: aliceblue;
+}
+.show_card a :hover{
+    color: orange;
+}
+
+/*Animated-NAME-Slider-HOVER-EFFECT----------- */
+/* === removing default button style ===*/
+.button {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+  }
+  
+  /* button styling */
+  .button {
+    --border-right: 6px;
+    --text-stroke-color: rgba(255,255,255,0.6);
+    --animation-color: orange;
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+  }
+  /* this is the text, when you hover on button */
+  .hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+  }
+  /* hover */
+  .button:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color))
+  }
+
+  /* Section-2------------------------------------ */
+  .watchnow img{
+    width: 100%;
+  }
+  .caption-2 {
+    width: 100%;
+  }
+  .caption-2 img{
+    width: 100%;
+  }
+  .cap_series{
+    color: aquamarine;
+  }
+  .cap h4{
+    color: aliceblue;
+  }
+  .cap h4:hover{
+    color: orange;
+  }
+  @media screen and (max-width:424px){
+    .watchnow{
+        width: 100%;
+      }
+      .caption-2 {
+        width: 100%;
+      }
+      .cap{
+        display: flex;
+        flex-wrap:wrap ;
+      }
+      .caption-2 img{
+        width: 100%;
+      }
+    
+  }
+
+
+  /* Section-4------------------------------------------ */
+.today h4{
+    color: aliceblue;
+}
+.yesterday h4{
+    color: aliceblue;
+}
+.today, .yesterday .timing{
+    color: aquamarine;
+}
+/* Animaton Button-------------------------------------- */
+.ani_btn {
+    font-family: inherit;
+    font-size: 20px;
+    background: orange;
+    color: white;
+    padding:  1rem 3rem ;
+    padding-left: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 20%;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.2s;
+  }
+  
+  .ani_btn span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .ani_btn svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .ani_btn:hover .svg-wrapper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+  }
+  
+  .ani_btn:hover svg {
+    transform: translateX(1.2em) rotate(45deg) scale(1.1);
+  }
+  
+  .ani_btn:hover span {
+    transform: translateX(5em);
+  }
+  
+  .ani_btn:active {
+    transform: scale(0.95);
+  }
+  
+  @keyframes fly-1 {
+    from {
+      transform: translateY(0.1em);
+    }
+  
+    to {
+      transform: translateY(-0.1em);
+    }
+  }
+  /* Section-5------------------------------- */
+  .wait{
+    margin-top: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+  }
+  .wait_h4 {
+    color: aliceblue;
+  }
+  .wait_h4:hover{
+    cursor: pointer;
+    color: orange;
+  }
+  /* Footer Section-------------------------------------- */
+
+  footer{
+    position: relative;
+    background:#000 linear-gradient(180deg,#0000,#213944) ;
+  }
+  footer li{
+    list-style:none ;
+    color: gray;
+  }
+  footer .row h5{
+    color: aliceblue;
+  }
+  footer .row li:hover{
+    cursor: pointer;
+    color: orange;
+    text-decoration: underline;
+  }
+  .copy_rights{
+    color: gray;
+  }
+
+  /* SPIN CARD------------------------------------- */
+  .myCard {
+    background-color: transparent;
+    width: 190px;
+    height: 254px;
+    perspective: 1000px;
+  }
+  
+  /* .title {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+  } */
+  
+  .innerCard {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }
+  
+  .myCard:hover .innerCard {
+    transform: rotateY(180deg);
+  }
+  
+  .frontSide,
+  .backSide {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    color: WHITE;
+    border: 1px solid gray;
+    background:rgb(46, 45, 45);
+    font-weight: 700;
+  }
+  
+  .backSide {
+    transform: rotateY(180deg);
+  }
+  
+  .frontSide::before,
+  .backSide::before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: '';
+    width: 110%;
+    height: 110%;
+    position: absolute;
+    z-index: -1;
+    filter: blur(20px);
+    animation: animate 5s linear infinite;
+  }
+  
+  @keyframes animate {
+    0% {
+      opacity: 0.3;
+    }
+  
+    80% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0.3;
+    }
+  }
